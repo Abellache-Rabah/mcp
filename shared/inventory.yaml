@@ -1,0 +1,38 @@
+---
+# Shared Network Inventory for GNS3 Simulation
+groups:
+  cisco:
+    platform: cisco_ios
+  arista:
+    platform: arista_eos
+  debian:
+    platform: linux
+
+hosts:
+  core-router:
+    hostname: core-router
+    groups: [cisco]
+    hostname_ip: 192.168.1.1
+    username: admin
+    password: password
+
+  dist-switch-01:
+    hostname: dist-switch-01
+    groups: [arista]
+    hostname_ip: 192.168.1.2
+    username: admin
+    password: password
+  
+  access-switch-01:
+    hostname: access-switch-01
+    groups: [cisco]
+    hostname_ip: 192.168.1.10
+    username: admin
+    password: password
+
+  srv-web-01:
+    hostname: srv-web-01
+    groups: [debian]
+    hostname_ip: 192.168.1.100
+    username: user
+    password: password
